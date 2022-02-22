@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="images/3xm.svg" alt="3XM" class="logo">
+            </a>
+
+            <nav>
+                <a href="#">
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <ul class="hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn"><img src="images/exit.svg" alt="exit meun"></li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <p>_________________________________</p> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="services">
+        <h1>Our Services</h1>
+        <div class="cen">
+          <div class="service">
+            <i class="fas fa-anchor"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+  
+          <div class="service">
+            <i class="fab fa-android"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+  
+          <div class="service">
+            <i class="fab fa-angellist"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+  
+          <div class="service">
+            <i class="fas fa-apple-alt"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+  
+          <div class="service">
+            <i class="fas fa-archway"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+  
+          <div class="service">
+            <i class="far fa-angry"></i>
+            <h2>Service Name</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+    </div>
+
+    <section class="authentic">
+        <img class="inverted" src="images/pc.jpg" alt="">
+
+        <div class="right-col">
+            <h2>Authentic. Awesome.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptate alias veniam molestiae, exercitationem aspernatur ut libero beatae harum at. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container inverted">
+            <div class="container">
+                <a href="#">
+                    <img src="images/3xm.svg" alt="logo" class="logo">
+                </a>
+                <p class="address">Melrose Place, 90210<br>USA</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    
+    var menu = document.getElementById('menu');
+    var nav = document.getElementById('nav');
+    var exit = document.getElementById('exit');
+
+    menu.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+    });
+
+    exit.addEventListener('click', function(e) {
+        nav.classList.add('hide-mobile');
+        e.preventDefault();
+    });
+
+</script>
+
+<script>
+
+    document.onkeypress = function (e) {
+        e = e || window.event;
+
+        if(e.keyCode === 13) {
+            document.documentElement.classList.toggle('dark-mode');
+
+            document.querySelectorAll('.inverted').forEach((result) => {
+                    result.classList.toggle('invert');
+                })
+        } 
+    }
+
+</script>
+</html>

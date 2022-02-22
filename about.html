@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="images/3xm.svg" alt="3XM" class="logo">
+            </a>
+
+            <a href="#" id="change-mode">
+                <img src="images/exit.svg" class="mode-image">
+            </a>
+
+            <nav>
+                <a href="#">
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <ul class="hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn"><img src="images/exit.svg" alt="exit meun"></li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <p>_________________________________</p> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- <div class="container">
+        <div class="toppers">
+            <div class="top-image">
+                <img src="images/pc.jpg" alt="">
+            </div>
+            <div class="left-image">
+                <img src="images/pc.jpg" alt="">
+            </div>
+        </div>
+    </div> -->
+    <div class="section">
+		<div class="con">
+			<div class="content-section">
+                
+				<div class="title">
+					<h1>About Us</h1>
+				</div>
+				<div class="content">
+					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					.</p>
+					<div class="button">
+						<a href="">Read More</a>
+					</div>
+				</div>
+				<div class="social">
+					<a href=""><i class="fab fa-facebook-f"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="image-section">
+				<img class="inverted" src="images/pc.jpg">
+			</div>
+		</div>
+	</div>
+
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img class="inverted" src="images/clouds-sky-anime.png">
+                <h3>That Sky Looks Dripin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quaerat omnis consequatur?</p>
+            </div>
+
+            <div class="facilities-col">
+                <img class="inverted" src="images/clouds-sky-anime.png">
+                <h3>That Sky Looks Dripin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quaerat omnis consequatur?</p>
+            </div>
+
+            <div class="facilities-col">
+                <img class="inverted" src="images/clouds-sky-anime.png">
+                <h3>That Sky Looks Dripin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quaerat omnis consequatur?</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container inverted">
+            <div class="container">
+                <a href="#">
+                    <img src="images/3xm.svg" alt="logo" class="logo">
+                </a>
+                <p class="address">Melrose Place, 90210<br>USA</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    
+    var menu = document.getElementById('menu');
+    var nav = document.getElementById('nav');
+    var exit = document.getElementById('exit');
+
+    menu.addEventListener('click', function(e) {
+        nav.classList.toggle('hide-mobile');
+        e.preventDefault();
+    });
+
+    exit.addEventListener('click', function(e) {
+        nav.classList.add('hide-mobile');
+        e.preventDefault();
+    });
+
+</script>
+
+<script>
+
+    // document.onkeypress = function (e) {
+    //     e = e || window.event;
+
+    //     if(e.keyCode === 13) {
+    //         document.documentElement.classList.toggle('dark-mode');
+
+    //         document.querySelectorAll('.inverted').forEach((result) => {
+    //                 result.classList.toggle('invert');
+    //             })
+    //     } 
+    // }
+
+    const changeModeButton = document.querySelector("#change-mode");
+
+        changeModeButton.onclick = function(){
+            document.documentElement.classList.toggle('dark-mode');
+
+            document.querySelectorAll('.inverted').forEach((result) => {
+                result.classList.toggle('invert');
+            })
+        };
+
+</script>
+</html>
